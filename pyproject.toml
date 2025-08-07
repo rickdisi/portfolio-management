@@ -1,0 +1,32 @@
+[project]
+name = "portfolio_management"
+version = "0.1.0"
+description = "My first automated trading project"
+authors = [
+    {name = "rickdisi",email = "riccardo.disilvio@icloud.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13,<4.0.0"
+dependencies = [
+    "pandas (>=2.3.1,<3.0.0)",
+    "numpy (>=2.3.1,<3.0.0)",
+    "matplotlib (>=3.10.3,<4.0.0)",
+    "ipykernel (>=6.29.5,<7.0.0)",
+    "alpaca-py (>=0.42.0,<0.43.0)",
+    "polars (>=1.31.0,<2.0.0)",
+    "ib-insync (>=0.9.86,<0.10.0)",
+    "python-dotenv (>=1.1.1,<2.0.0)",
+    "scipy (>=1.16.0,<2.0.0)",
+    "scikit-learn (>=1.7.1,<2.0.0)",
+    "cvxpy (>=1.7.1,<2.0.0)",
+    "statsmodels (>=0.14.5,<0.15.0)",
+    "joblib (>=1.5.1,<2.0.0)",
+    "apscheduler (>=3.11.0,<4.0.0)",
+    "config (>=0.5.1,<0.6.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+

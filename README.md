@@ -9,7 +9,7 @@ portfolio-management/
 ├─ config.json                # Single source of truth for tickers, weights, and risk parameters
 ├─ README.md                  # Project overview and instructions
 ├─ .env                       # (gitignored) Alpaca API credentials
-├─ requirements.txt           # Python dependencies
+├─ pyproject.toml             # Dependency manager is poetry
 │
 ├─ settings/
 │  ├─ __init__.py             # package marker
@@ -36,6 +36,9 @@ portfolio-management/
 │  ├─ __init__.py
 │  └─ executor.py             # `submit_orders()` logs & sends Alpaca orders
 │
+├─ logs/
+│  └─ trade_log.json          # Log of all trades (unique to you - gitignored)
+│
 └─ src/
    └─ main.py                 # Orchestrates daily_rebalance workflow
 ```
@@ -49,16 +52,15 @@ portfolio-management/
    ```
 2. **Create a virtual environment & install**
    ```bash
-   python3 -m venv .venv
-   source .venv/bin/activate
-   pip install -r requirements.txt
+   poetry install
+   poetry env activate
    ```
 3. **Configure API credentials**
    - Copy `.env.example` to `.env` and fill in your Alpaca keys:
      ```ini
      ALPACA_API_KEY=your_key_here
      ALPACA_API_SECRET=your_secret_here
-     TRADE_LOG=trade_log.json  # optional override
+     TRADE_LOG="logs/trade_log.json"  # optional override
      ```
 4. **Adjust **``
    - Edit tickers, `TARGET_WEIGHTS`, `VAR_CI`, etc., to suit your strategy.
@@ -68,7 +70,7 @@ portfolio-management/
 Run the daily rebalance script:
 
 ```bash
-source .venv/bin/activate
+poetry shell
 python -m src.main
 ```
 
@@ -87,7 +89,7 @@ Optionally, schedule it via cron or APScheduler by enabling the decorator in `ma
 
 - **Raw orders** are appended as NDJSON in `trade_log.json`, one JSON object per line:
   ```json
-  {"timestamp":"2025-07-25T20:03:02.628516","symbol":"AAPL","side":"BUY","qty":10,"price":179.45,"nav":1002483.77}
+  {"timestamp":"2025-07-25T20:03:02.628516","symbol":"AAPL","side":"BUY","qty":10,"price":179.45,"nav":1002483.77, "cash_left": 51614.72}
   ```
 - **Console** prints VaR and high-level status for each run.
 

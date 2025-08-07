@@ -1,5 +1,5 @@
 import cvxpy as cp, numpy as np, pandas as pd
-from portfolio_management.settings import config
+from settings import config
 
 class Allocator:
     def __init__(self, tickers_by_sleeve):
@@ -20,7 +20,13 @@ class Allocator:
             constraints += [cp.sum(w[idxs]) == tw]
             
         # Position limit
-        constraints += [w <= config.MAX_POSITION_PER_TICKER] # type: ignore
+        position_per_ticker = [
+            config.TARGET_WEIGHTS[asset] / len(config.TICKERS[asset]) if config.TICKERS[asset] else 0 # type: ignore
+            for asset in config.TARGET_WEIGHTS # type: ignore
+        ]
+
+        MAX_POSITION_PER_TICKER = max(*position_per_ticker)
+        constraints += [w <= MAX_POSITION_PER_TICKER] # type: ignore
 
         prob = cp.Problem(cp.Maximize(ret - 0.5 * risk), constraints)
         prob.solve()

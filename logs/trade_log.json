@@ -1,0 +1,64 @@
+{"timestamp":"2025-07-24T17:19:44.571118","symbol":"ETH","side":"BUY","qty":1477.0,"price":33.83,"nav":1000000.0}
+{"timestamp":"2025-07-24T17:19:44.673559","symbol":"LQD","side":"BUY","qty":1531.0,"price":108.8,"nav":1000000.0}
+{"timestamp":"2025-07-24T17:19:44.773972","symbol":"META","side":"BUY","qty":233.0,"price":713.58,"nav":1000000.0}
+{"timestamp":"2025-07-24T17:19:44.873303","symbol":"QQQ","side":"BUY","qty":295.0,"price":563.81,"nav":1000000.0}
+{"timestamp":"2025-07-24T17:19:44.976524","symbol":"SHY","side":"BUY","qty":2018.0,"price":82.57,"nav":1000000.0}
+{"timestamp":"2025-07-24T17:19:45.132225","symbol":"TLT","side":"BUY","qty":1937.0,"price":86.04,"nav":1000000.0}
+{"timestamp":"2025-07-24T17:19:45.231927","symbol":"TSLA","side":"BUY","qty":100.0,"price":332.56,"nav":1000000.0}
+{"timestamp":"2025-07-24T17:19:45.330310","symbol":"VOO","side":"BUY","qty":142.0,"price":582.86,"nav":1000000.0}
+{"timestamp":"2025-07-25T19:30:58.104028","symbol":"ETH","side":"SELL","qty":55.0,"price":35.26,"nav":1002834.76}
+{"timestamp":"2025-07-25T19:30:58.207606","symbol":"LQD","side":"BUY","qty":7.0,"price":108.64,"nav":1002834.76}
+{"timestamp":"2025-07-25T19:30:58.388163","symbol":"NVDA","side":"BUY","qty":192.0,"price":173.74,"nav":1002834.76}
+{"timestamp":"2025-07-25T19:30:58.491407","symbol":"SHY","side":"BUY","qty":7.0,"price":82.5,"nav":1002834.76}
+{"timestamp":"2025-07-25T19:30:58.589907","symbol":"TLT","side":"BUY","qty":8.0,"price":85.89,"nav":1002834.76}
+{"timestamp":"2025-07-25T19:30:58.694530","symbol":"TSLA","side":"SELL","qty":101.0,"price":305.3,"nav":1002834.76}
+{"timestamp":"2025-07-25T19:33:22.566466","symbol":"ETH","side":"SELL","qty":1.0,"price":35.26,"nav":1002585.64}
+{"timestamp":"2025-07-25T19:33:22.671729","symbol":"TSLA","side":"SELL","qty":101.0,"price":305.3,"nav":1002585.64}
+{"timestamp":"2025-07-25T19:38:57.518583","symbol":"LQD","side":"SELL","qty":1.0,"price":108.64,"nav":1002521.54}
+{"timestamp":"2025-07-25T19:38:57.619770","symbol":"TSLA","side":"SELL","qty":100.0,"price":305.3,"nav":1002521.54}
+{"timestamp":"2025-07-25T19:38:57.724098","symbol":"VOO","side":"BUY","qty":1.0,"price":583.26,"nav":1002521.54}
+{"timestamp":"2025-07-25T20:03:02.628516","symbol":"ETH","side":"BUY","qty":-10.0,"price":35.26,"nav":1002483.77}
+{"timestamp":"2025-07-25T20:06:33.284404","symbol":"SHY","side":"SELL","qty":1.0,"price":82.5,"nav":1002268.79}
+{"timestamp":"2025-07-25T20:06:33.386214","symbol":"TLT","side":"SELL","qty":1.0,"price":85.89,"nav":1002268.79}
+{"timestamp":"2025-07-26T21:47:36.183224","symbol":"LQD","side":"SELL","qty":6.0,"price":108.99,"nav":1001414.28}
+{"timestamp":"2025-07-26T21:47:36.321094","symbol":"QQQ","side":"SELL","qty":1.0,"price":566.37,"nav":1001414.28}
+{"timestamp":"2025-07-26T21:47:36.471213","symbol":"SHY","side":"SELL","qty":1.0,"price":82.55,"nav":1001414.28}
+{"timestamp":"2025-07-26T21:47:36.599511","symbol":"TLT","side":"SELL","qty":13.0,"price":86.43,"nav":1001414.28}
+{"timestamp":"2025-07-26T21:47:36.732864","symbol":"VOO","side":"SELL","qty":1.0,"price":585.58,"nav":1001414.28}
+{"timestamp":"2025-07-28T19:48:18.551446","symbol":"ETH","side":"BUY","qty":39.0,"price":34.32,"nav":1002567.7}
+{"timestamp":"2025-07-28T19:48:18.659286","symbol":"LQD","side":"BUY","qty":2.0,"price":108.99,"nav":1002567.7}
+{"timestamp":"2025-07-28T19:48:18.767405","symbol":"META","side":"SELL","qty":2.0,"price":712.68,"nav":1002567.7}
+{"timestamp":"2025-07-28T19:48:18.870764","symbol":"NVDA","side":"BUY","qty":11.0,"price":173.5,"nav":1002567.7}
+{"timestamp":"2025-07-28T19:48:18.974526","symbol":"QQQ","side":"BUY","qty":1.0,"price":566.37,"nav":1002567.7}
+{"timestamp":"2025-07-28T19:48:19.078904","symbol":"SHY","side":"BUY","qty":3.0,"price":82.55,"nav":1002567.7}
+{"timestamp":"2025-07-28T19:48:19.186519","symbol":"TLT","side":"BUY","qty":1.0,"price":86.43,"nav":1002567.7}
+{"timestamp":"2025-08-02T18:24:50.221760","symbol":"LQD","side":"SELL","qty":4.0,"price":109.63,"nav":1006248.99}
+{"timestamp":"2025-08-02T18:24:50.328875","symbol":"META","side":"SELL","qty":187.0,"price":750.01,"nav":1006248.99}
+{"timestamp":"2025-08-02T18:24:50.432438","symbol":"NVDA","side":"BUY","qty":762.0,"price":173.72,"nav":1006248.99}
+{"timestamp":"2025-08-02T18:24:50.532315","symbol":"QQQ","side":"BUY","qty":7.0,"price":553.88,"nav":1006248.99}
+{"timestamp":"2025-08-02T18:24:50.636844","symbol":"SHY","side":"BUY","qty":4.0,"price":82.66,"nav":1006248.99}
+{"timestamp":"2025-08-02T18:24:50.739589","symbol":"TLT","side":"SELL","qty":23.0,"price":87.82,"nav":1006248.99}
+{"timestamp":"2025-08-02T18:24:50.845592","symbol":"VOO","side":"BUY","qty":4.0,"price":571.45,"nav":1006248.99}
+{"timestamp":"2025-08-07T11:51:14.167928","symbol":"ETH","side":"BUY","qty":20.0,"price":34.7,"nav":1027668.75}
+{"timestamp":"2025-08-07T11:51:14.289199","symbol":"LQD","side":"BUY","qty":29.0,"price":109.87,"nav":1027668.75}
+{"timestamp":"2025-08-07T11:51:14.396499","symbol":"META","side":"SELL","qty":44.0,"price":771.99,"nav":1027668.75}
+{"timestamp":"2025-08-07T11:51:14.496121","symbol":"NVDA","side":"SELL","qty":11.0,"price":179.42,"nav":1027668.75}
+{"timestamp":"2025-08-07T11:51:14.595657","symbol":"QQQ","side":"SELL","qty":1.0,"price":567.32,"nav":1027668.75}
+{"timestamp":"2025-08-07T11:51:14.701219","symbol":"SHY","side":"BUY","qty":43.0,"price":82.68,"nav":1027668.75}
+{"timestamp":"2025-08-07T11:51:14.808764","symbol":"TLT","side":"BUY","qty":41.0,"price":87.82,"nav":1027668.75}
+{"timestamp":"2025-08-07T11:51:14.911812","symbol":"TSLA","side":"BUY","qty":92.0,"price":319.91,"nav":1027668.75}
+{"timestamp": "2025-08-07T18:38:20.198020", "symbol": "ETH", "side": "SELL", "qty": 1480, "price": 34.7, "nav": 1022847.3, "cash_left": 51614.72000000001}
+{"timestamp": "2025-08-07T18:38:20.312004", "symbol": "LQD", "side": "SELL", "qty": 7, "price": 109.87, "nav": 1022847.3, "cash_left": 52383.810000000005}
+{"timestamp": "2025-08-07T18:38:20.433236", "symbol": "NVDA", "side": "SELL", "qty": 4, "price": 179.42, "nav": 1022847.3, "cash_left": 53101.490000000005}
+{"timestamp": "2025-08-07T18:38:20.540361", "symbol": "QQQ", "side": "SELL", "qty": 1, "price": 567.32, "nav": 1022847.3, "cash_left": 53668.810000000005}
+{"timestamp": "2025-08-07T18:38:20.645497", "symbol": "SHY", "side": "SELL", "qty": 10, "price": 82.68, "nav": 1022847.3, "cash_left": 54495.61000000001}
+{"timestamp": "2025-08-07T18:38:20.749422", "symbol": "TLT", "side": "SELL", "qty": 9, "price": 87.82, "nav": 1022847.3, "cash_left": 55285.990000000005}
+{"timestamp": "2025-08-07T18:38:20.855559", "symbol": "TSLA", "side": "BUY", "qty": 172, "price": 319.91, "nav": 1022847.3, "cash_left": 261.47000000000116}
+{"timestamp": "2025-08-07T18:41:11.952183", "symbol": "SHY", "side": "BUY", "qty": 1, "price": 82.68, "nav": 1023012.52, "cash_left": 2418.67}
+{"timestamp": "2025-08-07T18:41:12.057277", "symbol": "TSLA", "side": "BUY", "qty": 2, "price": 319.91, "nav": 1023012.52, "cash_left": 1778.85}
+{"timestamp": "2025-08-07T19:17:15.482583", "symbol": "LQD", "side": "SELL", "qty": 3, "price": 109.87, "nav": 1021068.6, "cash_left": 2112.23}
+{"timestamp": "2025-08-07T19:17:15.587928", "symbol": "NVDA", "side": "SELL", "qty": 2, "price": 179.42, "nav": 1021068.6, "cash_left": 2471.07}
+{"timestamp": "2025-08-07T19:17:15.688576", "symbol": "QQQ", "side": "SELL", "qty": 1, "price": 567.32, "nav": 1021068.6, "cash_left": 3038.3900000000003}
+{"timestamp": "2025-08-07T19:17:15.793070", "symbol": "SHY", "side": "SELL", "qty": 4, "price": 82.68, "nav": 1021068.6, "cash_left": 3369.1100000000006}
+{"timestamp": "2025-08-07T19:17:15.899287", "symbol": "TLT", "side": "SELL", "qty": 4, "price": 87.82, "nav": 1021068.6, "cash_left": 3720.3900000000003}
+{"timestamp": "2025-08-07T19:17:16.000104", "symbol": "TSLA", "side": "SELL", "qty": 1, "price": 319.91, "nav": 1021068.6, "cash_left": 4040.3}

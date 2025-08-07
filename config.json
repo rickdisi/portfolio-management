@@ -1,0 +1,17 @@
+{
+  "TICKERS": {
+    "FICC": ["SHY","TLT","LQD"],
+    "EQUITY": ["AAPL","MSFT","GOOGL","AMZN","NVDA","TSLA","META","JPM"],
+    "ETF": ["VOO","QQQ","IWM"],
+    "CRYPTO": ["BTC","ETH"]
+  },
+  "TARGET_WEIGHTS": {
+    "FICC":0.5,
+    "EQUITY":0.25,
+    "ETF":0.25,
+    "CRYPTO":0
+  },
+  "VAR_CI":0.95,
+  "VAR_HORIZON_DAYS":1,
+  "MAX_POSITION_PER_TICKER":0.10
+}

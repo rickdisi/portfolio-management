@@ -1,23 +1,25 @@
-import datetime as dt, numpy as np, os
+import os
+import numpy as np
 import pandas as pd
-from apscheduler.schedulers.blocking import BlockingScheduler
-
-from portfolio_management.settings import config
-from portfolio_management.models.return_model import MixtureReturnModel
-from portfolio_management.models.simulator import MonteCarloSimulator
-from portfolio_management.risk.var import VaRCalculator
-from portfolio_management.portfolio.allocator import Allocator
-from portfolio_management.data.market_data import get_price_bars
-from portfolio_management.trader.executor import submit_orders
-
-from alpaca.trading.client import TradingClient
+import datetime as dt
 
 from dotenv import load_dotenv
+from alpaca.trading.client import TradingClient
+from apscheduler.schedulers.blocking import BlockingScheduler
+
+from settings import config
+from models.return_model import MixtureReturnModel
+from models.simulator import MonteCarloSimulator
+from risk.var import VaRCalculator
+from portfolio.allocator import Allocator
+from data.market_data import get_price_bars
+from trader.executor import submit_orders
+
 load_dotenv() 
 
 client = TradingClient(os.getenv("alpaca_key"), os.getenv("alpaca_secret"), paper=True)
 
-TICKERS = config.FICC_TICKERS + config.EQUITY_TICKERS + config.ETF_TICKERS + config.CRYPTO_TICKERS # type: ignore
+TICKERS = [ticker for sleeve_list in config.TICKERS.values() for ticker in sleeve_list] # type: ignore
 
 # SCHED = BlockingScheduler()
 # @SCHED.scheduled_job("cron", hour=20, minute=0) # After market close
@@ -51,13 +53,8 @@ def daily_rebalance():
     # 3. Optimise weights
     exp_ret = returns.mean()
     cov = returns.cov()
-    tickers_by_sleeve = {
-        "FICC": config.FICC_TICKERS, # type: ignore
-        "EQUITY": config.EQUITY_TICKERS, # type: ignore
-        "ETF": config.ETF_TICKERS, # type: ignore
-        "CRYPTO": config.CRYPTO_TICKERS # type: ignore
-    }
-    alloc = Allocator(tickers_by_sleeve)
+
+    alloc = Allocator(config.TICKERS) # type: ignore
     weights = alloc.optimise(exp_ret, cov, nav=1.0) # relative weights
 
     # 4. Execute adjustments (placeholder NAV = 100k)

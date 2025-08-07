@@ -18,8 +18,8 @@ class MixtureReturnModel:
         weights = np.asarray(self.model.weights_, dtype=float)
 
         comp = np.random.choice(np.arange(weights.shape[0]), size=(n_paths, horizon), p=weights)
-        draws = np.random.normal(means[comp], np.sqrt(covs[comp]))
-        
+        draws = np.random.normal(means[comp], np.sqrt(covs[comp])) 
+    
         return draws # shape (n_paths, horizon)
 
     def save(self, path):

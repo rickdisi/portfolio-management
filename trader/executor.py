@@ -1,4 +1,4 @@
-import logging, os, numpy as np
+import logging, os, json, numpy as np
 from datetime import datetime
 from pathlib import Path
 from alpaca.trading.client import TradingClient
@@ -8,8 +8,8 @@ from alpaca.trading.enums import OrderSide, TimeInForce
 from dotenv import load_dotenv
 load_dotenv() 
 
-log_dir = Path(__file__).parent / "data"
-LOG_PATH = os.getenv("tradelog_path", os.path.join(log_dir, "trade_log.csv"))
+log_dir = Path(__file__).parent / "logs"
+LOG_PATH = os.getenv("trade_log", log_dir / "trade_log.json")
 
 if not os.path.exists(LOG_PATH):
     # write header if file doesn’t exist
@@ -79,8 +79,8 @@ def submit_orders(target_weights, latest_prices, nav):
         if abs(delta_dollar) < 1: # ignore dust
             continue
         side = OrderSide.BUY if delta_dollar > 0 else OrderSide.SELL
-        
-        raw_qty = abs(int(delta_dollar // latest_prices[symbol]))
+
+        raw_qty = abs(int(delta_dollar // latest_prices[symbol])) if not np.isnan(delta_dollar) and not np.isnan(latest_prices[symbol]) else 0
 
         if side == OrderSide.SELL:
             max_sellable = current_qty.get(symbol, 0)
@@ -100,11 +100,19 @@ def submit_orders(target_weights, latest_prices, nav):
         if qty == 0:
             continue
 
-        ts = datetime.now().isoformat()
-        log_line = f"{ts},{symbol},{side.name},{qty},{price:.2f},{nav:.2f}\n"
+        entry = {
+            "timestamp": datetime.now().isoformat(),
+            "symbol": symbol,
+            "side": side.name,
+            "qty": qty,
+            "price": price,
+            "nav": nav,
+            "cash_left": cash_left
+        }
         with open(LOG_PATH, "a") as f:
-            f.write(log_line)
-        logger.info(f"Logging trade → {log_line.strip()}")
+            f.write(json.dumps(entry) + "\n")
+
+        logger.info(f"Logging trade → {entry.values()}")
 
         req = MarketOrderRequest(symbol=symbol, qty=qty,
                                   side=side,

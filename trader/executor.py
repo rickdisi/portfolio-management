@@ -8,13 +8,9 @@ from alpaca.trading.enums import OrderSide, TimeInForce
 from dotenv import load_dotenv
 load_dotenv() 
 
-log_dir = Path(__file__).parent / "logs"
+log_dir = Path(__file__).parent.parent / "logs"
 LOG_PATH = os.getenv("trade_log", log_dir / "trade_log.json")
-
-if not os.path.exists(LOG_PATH):
-    # write header if file doesn’t exist
-    with open(LOG_PATH, "w") as f:
-        f.write("timestamp,symbol,side,qty,price,nav\n")
+os.makedirs(log_dir, exist_ok=True)
 
 logger = logging.getLogger("trade_executor")
 logger.setLevel(logging.INFO)

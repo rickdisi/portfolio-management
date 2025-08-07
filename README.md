@@ -86,7 +86,7 @@ Optionally, schedule it via cron or APScheduler by enabling the decorator in `ma
 
 - **Raw orders** are appended as NDJSON in `trade_log.json`, one JSON object per line:
   ```json
-  {"timestamp":"2025-07-25T20:03:02.628516","symbol":"AAPL","side":"BUY","qty":10,"price":179.45,"nav":1002483.77, "cash_left": 51614.72}}
+  {"timestamp":"2025-07-25T20:03:02.628516","symbol":"AAPL","side":"BUY","qty":10,"price":179.45,"nav":1002483.77, "cash_left": 51614.72}
   ```
 - **Console** prints VaR and high-level status for each run.
 

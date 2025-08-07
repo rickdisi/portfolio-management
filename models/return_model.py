@@ -13,14 +13,22 @@ class MixtureReturnModel:
 
     def sample(self, n_paths: int, horizon: int):
         """Generate synthetic return paths for MC simulation."""
-        means = np.array(self.model.means_).flatten()
-        covs = np.array(self.model.covariances_).flatten()
+        means = np.array(self.model.means_)
+        covs = np.array(self.model.covariances_)
         weights = np.asarray(self.model.weights_, dtype=float)
 
-        comp = np.random.choice(np.arange(weights.shape[0]), size=(n_paths, horizon), p=weights)
-        draws = np.random.normal(means[comp], np.sqrt(covs[comp])) 
-    
-        return draws # shape (n_paths, horizon)
+        K, n_assets = means.shape
+        comp = np.random.choice(K, size=n_paths, p=weights)
+        out = np.zeros((n_paths, horizon, n_assets))
+        for i, comp in enumerate(comp):
+            # draws a single vector of length n_assets
+            draw = np.random.multivariate_normal(
+                mean=means[comp],    # 1D array of length n_assets
+                cov=covs[comp]       # 2D array (n_assets × n_assets)
+            )
+            out[i, 0, :] = draw 
+
+        return out # shape (n_paths, horizon, n_assets)
 
     def save(self, path):
         dump(self.model, path)

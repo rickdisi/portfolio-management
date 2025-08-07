@@ -62,3 +62,9 @@
 {"timestamp": "2025-08-07T19:17:15.793070", "symbol": "SHY", "side": "SELL", "qty": 4, "price": 82.68, "nav": 1021068.6, "cash_left": 3369.1100000000006}
 {"timestamp": "2025-08-07T19:17:15.899287", "symbol": "TLT", "side": "SELL", "qty": 4, "price": 87.82, "nav": 1021068.6, "cash_left": 3720.3900000000003}
 {"timestamp": "2025-08-07T19:17:16.000104", "symbol": "TSLA", "side": "SELL", "qty": 1, "price": 319.91, "nav": 1021068.6, "cash_left": 4040.3}
+{"timestamp": "2025-08-07T19:21:59.903237", "symbol": "LQD", "side": "BUY", "qty": 1, "price": 109.87, "nav": 1021159.24, "cash_left": 3923.4900000000002}
+{"timestamp": "2025-08-07T19:32:22.709496", "symbol": "NVDA", "side": "BUY", "qty": 1, "price": 179.42, "nav": 1021628.57, "cash_left": 3744.19}
+{"timestamp": "2025-08-07T19:32:22.814810", "symbol": "QQQ", "side": "BUY", "qty": 1, "price": 567.32, "nav": 1021628.57, "cash_left": 3176.87}
+{"timestamp": "2025-08-07T19:32:22.922652", "symbol": "SHY", "side": "BUY", "qty": 1, "price": 82.68, "nav": 1021628.57, "cash_left": 3094.19}
+{"timestamp": "2025-08-07T19:32:23.026656", "symbol": "TLT", "side": "BUY", "qty": 1, "price": 87.82, "nav": 1021628.57, "cash_left": 3006.37}
+{"timestamp": "2025-08-07T19:32:23.134176", "symbol": "TSLA", "side": "BUY", "qty": 1, "price": 319.91, "nav": 1021628.57, "cash_left": 2686.46}

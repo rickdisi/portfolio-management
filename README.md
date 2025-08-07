@@ -36,6 +36,9 @@ portfolio-management/
 │  ├─ __init__.py
 │  └─ executor.py             # `submit_orders()` logs & sends Alpaca orders
 │
+├─ logs/
+│  └─ trade_log.json          # Log of all trades (unique to you - gitignored)
+│
 └─ src/
    └─ main.py                 # Orchestrates daily_rebalance workflow
 ```
